@@ -14,6 +14,9 @@
 		B5D0DDD22044096000A6CF8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D0DDD02044096000A6CF8C /* LaunchScreen.storyboard */; };
 		B5D0DDDA20440B8300A6CF8C /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D0DDD920440B8300A6CF8C /* StoryTableViewCell.swift */; };
 		B5D0DDDC20440B8F00A6CF8C /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D0DDDB20440B8F00A6CF8C /* StoriesTableViewController.swift */; };
+		B5D0DDDE2044596000A6CF8C /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D0DDDD2044596000A6CF8C /* Stories.swift */; };
+		B5D0DDE020445FC900A6CF8C /* AlertsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D0DDDF20445FC900A6CF8C /* AlertsTableViewController.swift */; };
+		B5D0DDE22044679900A6CF8C /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D0DDE12044679900A6CF8C /* StoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		B5D0DDD32044096000A6CF8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5D0DDD920440B8300A6CF8C /* StoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
 		B5D0DDDB20440B8F00A6CF8C /* StoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
+		B5D0DDDD2044596000A6CF8C /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		B5D0DDDF20445FC900A6CF8C /* AlertsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsTableViewController.swift; sourceTree = "<group>"; };
+		B5D0DDE12044679900A6CF8C /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		B622741E1EC932FE1C15F0FA /* Pods-techtimes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-techtimes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-techtimes/Pods-techtimes.debug.xcconfig"; sourceTree = "<group>"; };
 		E956681BF84700FDB5634C95 /* Pods-techtimes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-techtimes.release.xcconfig"; path = "Pods/Target Support Files/Pods-techtimes/Pods-techtimes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +86,8 @@
 		B5D0DDC62044096000A6CF8C /* techtimes */ = {
 			isa = PBXGroup;
 			children = (
-				B5D0DDDB20440B8F00A6CF8C /* StoriesTableViewController.swift */,
+				B5D0DDE3204467F300A6CF8C /* Controllers */,
+				B5D0DDDD2044596000A6CF8C /* Stories.swift */,
 				B5D0DDD920440B8300A6CF8C /* StoryTableViewCell.swift */,
 				B5D0DDC72044096000A6CF8C /* AppDelegate.swift */,
 				B5D0DDCB2044096000A6CF8C /* Main.storyboard */,
@@ -89,6 +96,16 @@
 				B5D0DDD32044096000A6CF8C /* Info.plist */,
 			);
 			path = techtimes;
+			sourceTree = "<group>";
+		};
+		B5D0DDE3204467F300A6CF8C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B5D0DDDF20445FC900A6CF8C /* AlertsTableViewController.swift */,
+				B5D0DDDB20440B8F00A6CF8C /* StoriesTableViewController.swift */,
+				B5D0DDE12044679900A6CF8C /* StoryViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,9 +239,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D0DDE22044679900A6CF8C /* StoryViewController.swift in Sources */,
 				B5D0DDDA20440B8300A6CF8C /* StoryTableViewCell.swift in Sources */,
+				B5D0DDDE2044596000A6CF8C /* Stories.swift in Sources */,
 				B5D0DDC82044096000A6CF8C /* AppDelegate.swift in Sources */,
 				B5D0DDDC20440B8F00A6CF8C /* StoriesTableViewController.swift in Sources */,
+				B5D0DDE020445FC900A6CF8C /* AlertsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FMQ6R58UAV;
 				INFOPLIST_FILE = techtimes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.creativitykills.techtimes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -382,7 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FMQ6R58UAV;
 				INFOPLIST_FILE = techtimes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.creativitykills.techtimes;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,4 +1,4 @@
-platform :ios, '10.0'
+platform :ios, '11.0'
 target 'techtimes' do
   use_frameworks!
   pod 'Alamofire', '~> 4.6.0'

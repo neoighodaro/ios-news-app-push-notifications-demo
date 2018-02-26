@@ -24,7 +24,7 @@ Route::get('/stories/{id}', function (int $id) {
 });
 
 Route::get('/stories', function () {
-    return Story::orderBy('id', 'desc')->paginate(20);
+    return Story::orderBy('id', 'desc')->take(20)->get();
 });
 
 Route::view('/', 'welcome');
