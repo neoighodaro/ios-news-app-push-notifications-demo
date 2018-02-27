@@ -161,8 +161,6 @@
                     </view>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
-                        <outlet property="contentView" destination="D99-ya-aV6" id="huT-Ei-YAr"/>
-                        <outlet property="scrollView" destination="ZCC-vK-gnW" id="B4S-3H-wYa"/>
                         <outlet property="storyContent" destination="XU7-KS-MF9" id="RCZ-T9-fOr"/>
                         <outlet property="storyTitle" destination="X6K-2u-boV" id="kV7-3g-1YK"/>
                     </connections>

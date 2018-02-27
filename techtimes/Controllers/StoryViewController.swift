@@ -11,14 +11,9 @@ import UIKit
 class StoryViewController: UIViewController {
     
     var story: Stories.Story?
-    
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var contentView: UIView!
 
     @IBOutlet weak var storyTitle: UILabel!
     @IBOutlet weak var storyContent: UITextView!
-    
-    @IBOutlet weak var contentViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,5 +21,10 @@ class StoryViewController: UIViewController {
         
         storyTitle.text = story?.title
         storyContent.text = story?.content
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

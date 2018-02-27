@@ -32,6 +32,7 @@
 		B5D0DDDD2044596000A6CF8C /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		B5D0DDDF20445FC900A6CF8C /* AlertsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsTableViewController.swift; sourceTree = "<group>"; };
 		B5D0DDE12044679900A6CF8C /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		B5D0DDE42044BD7500A6CF8C /* techtimes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = techtimes.entitlements; sourceTree = "<group>"; };
 		B622741E1EC932FE1C15F0FA /* Pods-techtimes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-techtimes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-techtimes/Pods-techtimes.debug.xcconfig"; sourceTree = "<group>"; };
 		E956681BF84700FDB5634C95 /* Pods-techtimes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-techtimes.release.xcconfig"; path = "Pods/Target Support Files/Pods-techtimes/Pods-techtimes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +87,7 @@
 		B5D0DDC62044096000A6CF8C /* techtimes */ = {
 			isa = PBXGroup;
 			children = (
+				B5D0DDE42044BD7500A6CF8C /* techtimes.entitlements */,
 				B5D0DDE3204467F300A6CF8C /* Controllers */,
 				B5D0DDDD2044596000A6CF8C /* Stories.swift */,
 				B5D0DDD920440B8300A6CF8C /* StoryTableViewCell.swift */,
@@ -144,6 +146,11 @@
 					B5D0DDC32044096000A6CF8C = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -382,6 +389,7 @@
 			baseConfigurationReference = B622741E1EC932FE1C15F0FA /* Pods-techtimes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = techtimes/techtimes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FMQ6R58UAV;
 				INFOPLIST_FILE = techtimes/Info.plist;
@@ -399,6 +407,7 @@
 			baseConfigurationReference = E956681BF84700FDB5634C95 /* Pods-techtimes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = techtimes/techtimes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FMQ6R58UAV;
 				INFOPLIST_FILE = techtimes/Info.plist;

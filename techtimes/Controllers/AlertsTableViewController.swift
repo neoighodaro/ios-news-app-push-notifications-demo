@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PushNotifications
 
 class AlertsTableViewController: UITableViewController {
     
@@ -72,6 +73,18 @@ class AlertsTableViewController: UITableViewController {
     
     @objc func switchChanged(_ sender: UISwitch) {
         categories[sender.tag]["subscribed"] = sender.isOn
-        saveCategories()
+        
+        let pushNotifications = PushNotifications.shared
+        let interest = categories[sender.tag]["interest"] as! String
+        
+        if sender.isOn {
+            try? pushNotifications.subscribe(interest: interest) {
+                self.saveCategories()
+            }
+        } else {
+            try? pushNotifications.unsubscribe(interest: interest) {
+                self.saveCategories()
+            }
+        }
     }
 }

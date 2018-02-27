@@ -20,7 +20,6 @@ class StoriesTableViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 140
 
-        
         self.fetchStories { response in
             guard response != nil else { return }
             self.stories = response!.stories
