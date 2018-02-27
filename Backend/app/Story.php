@@ -28,10 +28,16 @@ class Story extends Model
                 'apns' => [
                     'aps' => [
                         'alert' => [
-                            'title' => "📖 TechTimes: {$this->title}",
+                            'title' => "📖 {$this->title}",
                             'body' => (string) $this->notification,
                         ],
+                        'mutable-content' => 0,
+                        'category' => 'pusher',
+                        'sound' => 'default'
                     ],
+                    'data' => array_only($this->toArray(), [
+                        'title', 'content'
+                    ]),
                 ],
             ]
         );

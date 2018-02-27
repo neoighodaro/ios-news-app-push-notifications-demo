@@ -27,17 +27,13 @@ struct Stories {
     }
     
     struct Story {
-        let id: Int
         let title: String
         let content: String
-        let created_at: String
         let featuredImage: UIImage?
         
         init(story: [String:AnyObject]) {
-            self.id = story["id"] as! Int
             self.title = story["title"] as! String
             self.content = story["content"] as! String
-            self.created_at = story["created_at"] as! String
             self.featuredImage = nil
         }
     }

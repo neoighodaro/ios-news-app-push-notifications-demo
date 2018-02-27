@@ -17,6 +17,8 @@
 		B5D0DDDE2044596000A6CF8C /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D0DDDD2044596000A6CF8C /* Stories.swift */; };
 		B5D0DDE020445FC900A6CF8C /* AlertsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D0DDDF20445FC900A6CF8C /* AlertsTableViewController.swift */; };
 		B5D0DDE22044679900A6CF8C /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D0DDE12044679900A6CF8C /* StoryViewController.swift */; };
+		B5D0DDE62045089100A6CF8C /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D0DDE52045089100A6CF8C /* Deeplink.swift */; };
+		B5D0DDE820450AAC00A6CF8C /* NotificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D0DDE720450AAC00A6CF8C /* NotificationParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		B5D0DDDF20445FC900A6CF8C /* AlertsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsTableViewController.swift; sourceTree = "<group>"; };
 		B5D0DDE12044679900A6CF8C /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		B5D0DDE42044BD7500A6CF8C /* techtimes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = techtimes.entitlements; sourceTree = "<group>"; };
+		B5D0DDE52045089100A6CF8C /* Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
+		B5D0DDE720450AAC00A6CF8C /* NotificationParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationParser.swift; sourceTree = "<group>"; };
 		B622741E1EC932FE1C15F0FA /* Pods-techtimes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-techtimes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-techtimes/Pods-techtimes.debug.xcconfig"; sourceTree = "<group>"; };
 		E956681BF84700FDB5634C95 /* Pods-techtimes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-techtimes.release.xcconfig"; path = "Pods/Target Support Files/Pods-techtimes/Pods-techtimes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +100,8 @@
 				B5D0DDCE2044096000A6CF8C /* Assets.xcassets */,
 				B5D0DDD02044096000A6CF8C /* LaunchScreen.storyboard */,
 				B5D0DDD32044096000A6CF8C /* Info.plist */,
+				B5D0DDE52045089100A6CF8C /* Deeplink.swift */,
+				B5D0DDE720450AAC00A6CF8C /* NotificationParser.swift */,
 			);
 			path = techtimes;
 			sourceTree = "<group>";
@@ -147,6 +153,9 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -248,10 +257,12 @@
 			files = (
 				B5D0DDE22044679900A6CF8C /* StoryViewController.swift in Sources */,
 				B5D0DDDA20440B8300A6CF8C /* StoryTableViewCell.swift in Sources */,
+				B5D0DDE62045089100A6CF8C /* Deeplink.swift in Sources */,
 				B5D0DDDE2044596000A6CF8C /* Stories.swift in Sources */,
 				B5D0DDC82044096000A6CF8C /* AppDelegate.swift in Sources */,
 				B5D0DDDC20440B8F00A6CF8C /* StoriesTableViewController.swift in Sources */,
 				B5D0DDE020445FC900A6CF8C /* AlertsTableViewController.swift in Sources */,
+				B5D0DDE820450AAC00A6CF8C /* NotificationParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
