@@ -11,7 +11,7 @@ import UIKit
 struct Stories {
     
     struct Request {
-        let URL = "https://ac51eaa0.ngrok.io/stories"
+        let URL = "https://127.0.0.1:8000/stories"
     }
     
     struct Response {
