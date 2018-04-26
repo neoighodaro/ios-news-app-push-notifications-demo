@@ -21,8 +21,8 @@ class StoriesTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 140
 
         self.fetchStories { response in
-            guard response != nil else { return }
-            self.stories = response!.stories
+            guard let response = response else { return }
+            self.stories = response.stories
             self.tableView.reloadData()
         }
     }
@@ -40,11 +40,22 @@ class StoriesTableViewController: UITableViewController {
         Alamofire.request(request.URL).validate().responseJSON { response in
             guard response.result.isSuccess,
             let stories = response.result.value as? [[String:AnyObject]] else {
+                self.noStoriesAlert()
                 return completion(nil)
             }
             
             completion(Stories.Response(stories: stories))
         }
+    }
+    
+    private func noStoriesAlert() {
+        let alertController = UIAlertController(title: "Error Fetching News",
+                                               message: "An error occurred while fetching the latest news.",
+                                               preferredStyle: .alert)
+
+        alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+
+        self.present(alertController, animated: true, completion: nil)   
     }
 
     // MARK: - Table view data source
